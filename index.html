@@ -4,25 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>Oral Exam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.5/trianglify.min.js"></script>
   </head>
+  <style>
+    canvas {
+        z-index: -1;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    .jumbotron {
+        text-align: center;
+        min-width: 90%;
+        background-color: rgba(204, 51, 255,0.3);
+        padding-top: 1.4em;
+        padding-bottom: 0.9em;
+    }
+  </style>
   <body>
-    <h1>¡Hola, mundo!</h1>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <div class="jumbotron">
+      <div class="containter">
+        <h1>¡Hola, mundo!</h1>
+        <p>Disfruta la pelicula</p>
+      </div>
+    </div>
   </body>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
+  <script src="trianglify.min.js"></script>
+  <script>
+    var pattern = Trianglify({
+      height: window.innerHeight,
+      width: window.innerWidth,
+      variance: 1,
+      x_colors: 'YlGnBu'});
+    document.body.insertBefore(pattern.canvas(), document.body.firstChild);
+  </script>
+
 </html>
