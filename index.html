@@ -18,11 +18,27 @@
     }
     .jumbotron {
         text-align: center;
-        min-width: 90%;
         background-color: rgba(204, 51, 255,0.3);
         padding-top: 1.4em;
         padding-bottom: 0.9em;
     }
+    #youtube {
+        margin: auto;
+    }
+   .video-container {
+        position: relative;
+        padding-left: 20%;
+        margin: auto;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe {
+        position: absolute;
+        height: 60%;
+        width: 60%;
+        top:0;
+    } 
   </style>
   <body>
     <div class="jumbotron">
@@ -30,6 +46,13 @@
         <h1>¡Hola, mundo!</h1>
         <p>Disfruta la pelicula</p>
       </div>
+    </div>
+    <div class="container" id="youtube">
+    <div class="video-container">
+      <!--iframe src="http://www.youtube.com/embed/4aQwT3n2c1Q" allowfullscreen="true"-->
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/68OOz4hsXFg" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+    </div>
     </div>
   </body>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
@@ -42,5 +65,4 @@
       x_colors: 'YlGnBu'});
     document.body.insertBefore(pattern.canvas(), document.body.firstChild);
   </script>
-
 </html>
